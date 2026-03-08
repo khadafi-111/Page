@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal Portfolio - Software Developer, Database Enthusiast, Problem Solver" />
+  <title>MOH. Khadafi Wijaya — Personal Portfolio</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div id="scrollProgress"></div>
+  <!-- Custom cursor -->
+  <div id="cursorDot"></div>
+  <div id="cursorRing"></div>
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║              NAVIGATION BAR              ║
+       ╚══════════════════════════════════════════╝ -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">MOH. Khadafi<span>Wijaya</span></a>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav gap-1">
+          <li class="nav-item"><a class="nav-link" href="#home"      data-section="home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about"     data-section="about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio" data-section="portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects"  data-section="projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact"   data-section="contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║               HOME SECTION               ║
+       ╚══════════════════════════════════════════╝ -->
+  <section id="home">
+    <canvas id="particleCanvas"></canvas>
+    <!-- Floating orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="container">
+      <div class="row align-items-center min-vh-100 py-5">
+
+        <!-- Text Column -->
+        <div class="col-lg-7 order-2 order-lg-1">
+          <p class="home-tagline hero-anim">Welcome to my portfolio</p>
+
+          <h1 class="home-headline hero-anim">
+            Hello, I'm<br />
+            <em class="glitch-text" data-text="Khadafi" style="font-style:italic; color:var(--accent-dark);">Khadafi</em>
+          </h1>
+
+          <p class="home-subtitle hero-anim">
+            <span id="typedText">Software Developer</span>
+            <span class="cursor" style="border-right:2px solid var(--accent); animation: blink 1s step-end infinite; margin-left:2px;">&nbsp;</span>
+          </p>
+
+          <p class="home-description hero-anim">
+            Passionate about crafting efficient systems, elegant databases, 
+            and intuitive applications. Currently pursuing my degree at 
+            Universitas Ma Chung, Malang.
+          </p>
+
+          <div class="home-cta-group hero-anim">
+            <span class="magnetic-wrap">
+              <a href="#portfolio" class="btn-accent ripple-btn">View Portfolio</a>
+            </span>
+            <span class="magnetic-wrap">
+              <a href="#contact" class="btn-outline-accent ripple-btn">Contact Me</a>
+            </span>
+          </div>
+        </div>
+
+        <!-- Image Column -->
+        <div class="col-lg-5 order-1 order-lg-2 d-flex justify-content-center">
+          <div class="home-image-frame hero-anim">
+            <img src="assets/images/profil1edited.png"
+                 alt="Profile Photo"
+                 onerror="this.style.display='none'; this.parentNode.querySelector('.img-ph').style.display='flex';" />
+            <div class="img-ph img-placeholder" style="display:none; position:absolute; inset:0; border-radius:var(--radius); z-index:1;">
+              <div style="text-align:center;">
+                <i class="bi bi-person-fill" style="font-size:4rem; opacity:0.6;"></i>
+                <div style="font-size:0.85rem; opacity:0.7; margin-top:8px;">profile.jpg</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="home-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║              ABOUT SECTION               ║
+       ╚══════════════════════════════════════════╝ -->
+  <section id="about">
+    <div class="section-num">02</div>
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <!-- Image -->
+        <div class="col-lg-5 fade-in-left">
+          <div class="about-img-wrap">
+            <img src="assets/images/profil1edited.png"
+                 alt="About Photo"
+                 onerror="this.style.display='none'; this.parentNode.querySelector('.about-ph').style.display='flex';" />
+            <div class="about-ph img-placeholder" style="display:none; height:380px; border-radius:var(--radius); max-width:360px; margin:0 auto;">
+              <i class="bi bi-person-workspace" style="font-size:5rem; opacity:0.5;"></i>
+            </div>
+            <div class="about-badge">
+              <strong>3+</strong>
+              Years<br />Experience
+            </div>
+          </div>
+        </div>
+
+        <!-- Text & Skills -->
+        <div class="col-lg-7 fade-in-right">
+          <span class="section-label">About Me</span>
+          <h2 class="section-title">Driven by code,<br /><em>designed by curiosity</em></h2>
+          <div class="divider"></div>
+
+          <div class="about-text">
+            <p>
+              Saya adalah mahasiswa teknologi informasi yang memiliki passion mendalam dalam pengembangan 
+              perangkat lunak dan manajemen basis data. Dengan pengalaman di berbagai proyek akademik maupun 
+              personal, saya terbiasa menghadapi tantangan teknis dan mencari solusi yang efisien.
+            </p>
+            <p>
+              Keahlian saya mencakup pengembangan web modern, pemrograman PL/SQL untuk Oracle Database, 
+              dan analisis sistem informasi. Saya percaya bahwa teknologi terbaik adalah yang memecahkan 
+              masalah nyata dengan cara yang elegan dan berkelanjutan.
+            </p>
+            <p>
+              Saat ini menempuh pendidikan di
+              <a href="https://machung.ac.id/" target="_blank" rel="noopener" style="font-weight:500; color:var(--accent-dark);">
+                Universitas Ma Chung, Malang
+              </a> — dengan fokus pada Software Engineering dan Information Systems.
+            </p>
+          </div>
+
+          <!-- Skills -->
+          <div class="skills-wrap mt-4">
+            <div class="skill-item">
+              <div class="skill-label"><span>Web Development</span><span>88%</span></div>
+              <div class="progress"><div class="progress-bar" data-width="88" style="width:0%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-label"><span>Database (PL/SQL)</span><span>82%</span></div>
+              <div class="progress"><div class="progress-bar" data-width="82" style="width:0%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-label"><span>Java Programming</span><span>75%</span></div>
+              <div class="progress"><div class="progress-bar" data-width="75" style="width:0%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-label"><span>System Analysis</span><span>80%</span></div>
+              <div class="progress"><div class="progress-bar" data-width="80" style="width:0%"></div></div>
+            </div>
+          </div>
+
+          <a href="https://machung.ac.id/" target="_blank" rel="noopener" class="uni-link">
+            <i class="bi bi-mortarboard-fill"></i>
+            Universitas Ma Chung — Malang
+            <i class="bi bi-arrow-right"></i>
+          </a>
+
+          <!-- Animated Stats -->
+          <div class="row g-3 mt-4 stagger-children" id="statsRow">
+            <div class="col-4">
+              <div class="stat-card blur-in">
+                <div class="stat-num" data-target="3" data-suffix="+">0+</div>
+                <div class="stat-label">Years Exp</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-card blur-in">
+                <div class="stat-num" data-target="12" data-suffix="+">0+</div>
+                <div class="stat-label">Projects</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-card blur-in">
+                <div class="stat-num" data-target="8" data-suffix="">0</div>
+                <div class="stat-label">Technologies</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║            PORTFOLIO SECTION             ║
+       ╚══════════════════════════════════════════╝ -->
+  <section id="portfolio">
+    <div class="section-num">03</div>
+    <div class="container">
+
+      <!-- Header -->
+      <div class="text-center mb-5 fade-in-up">
+        <span class="section-label">My Work</span>
+        <h2 class="section-title">Selected <em>Portfolio</em></h2>
+        <div class="divider center"></div>
+        <p style="max-width:520px; margin:0 auto; font-size:0.95rem;">
+          A curated selection of projects spanning web development, database systems, 
+          and enterprise information systems.
+        </p>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="row g-4">
+
+        <!-- Card 1 -->
+        <div class="col-lg-4 col-md-6 fade-in-up delay-1">
+          <div class="portfolio-card">
+            <img src="assets/images/project1.jpg" alt="Sistem Informasi Akademik"
+                 class="portfolio-card-img"
+                 onerror="this.style.display='none'; this.parentNode.querySelector('.card-ph1').style.display='flex';" />
+            <div class="card-ph1 img-placeholder" style="display:none; height:200px; font-size:0.9rem; gap:8px; flex-direction:column;">
+              <i class="bi bi-mortarboard" style="font-size:2.5rem;"></i>
+              Sistem Informasi Akademik
+            </div>
+            <div class="portfolio-card-body">
+              <span class="portfolio-card-tag">Web App · PHP · MySQL</span>
+              <h3 class="portfolio-card-title">Sistem Informasi Akademik</h3>
+              <p class="portfolio-card-desc">
+                Aplikasi manajemen akademik lengkap meliputi pengelolaan nilai, 
+                jadwal kuliah, data mahasiswa, dan pelaporan akademik.
+              </p>
+              <a href="#" class="btn-outline-accent ripple-btn" style="font-size:0.76rem; padding:9px 22px;">
+                View Project <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-lg-4 col-md-6 fade-in-up delay-2">
+          <div class="portfolio-card">
+            <img src="assets/images/project2.jpg" alt="Aplikasi Manajemen Data"
+                 class="portfolio-card-img"
+                 onerror="this.style.display='none'; this.parentNode.querySelector('.card-ph2').style.display='flex';" />
+            <div class="card-ph2 img-placeholder" style="display:none; height:200px; font-size:0.9rem; gap:8px; flex-direction:column;">
+              <i class="bi bi-database" style="font-size:2.5rem;"></i>
+              Aplikasi Manajemen Data
+            </div>
+            <div class="portfolio-card-body">
+              <span class="portfolio-card-tag">Oracle DB · PL/SQL · Java</span>
+              <h3 class="portfolio-card-title">Aplikasi Manajemen Data</h3>
+              <p class="portfolio-card-desc">
+                Sistem CRUD berbasis Java dengan backend Oracle Database, 
+                dilengkapi stored procedure dan trigger untuk validasi data.
+              </p>
+              <a href="#" class="btn-outline-accent ripple-btn" style="font-size:0.76rem; padding:9px 22px;">
+                View Project <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-lg-4 col-md-6 fade-in-up delay-3">
+          <div class="portfolio-card">
+            <img src="assets/images/project3.jpg" alt="Website Landing Page"
+                 class="portfolio-card-img"
+                 onerror="this.style.display='none'; this.parentNode.querySelector('.card-ph3').style.display='flex';" />
+            <div class="card-ph3 img-placeholder" style="display:none; height:200px; font-size:0.9rem; gap:8px; flex-direction:column;">
+              <i class="bi bi-window-stack" style="font-size:2.5rem;"></i>
+              Website Landing Page
+            </div>
+            <div class="portfolio-card-body">
+              <span class="portfolio-card-tag">HTML · CSS · Bootstrap</span>
+              <h3 class="portfolio-card-title">Website Landing Page Bisnis</h3>
+              <p class="portfolio-card-desc">
+                Landing page responsif untuk bisnis lokal dengan desain modern, 
+                animasi scroll, dan form kontak terintegrasi.
+              </p>
+              <a href="#" class="btn-outline-accent ripple-btn" style="font-size:0.76rem; padding:9px 22px;">
+                View Project <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-lg-4 col-md-6 fade-in-up delay-1">
+          <div class="portfolio-card">
+            <div class="img-placeholder" style="height:200px; font-size:0.9rem; gap:8px; flex-direction:column;">
+              <i class="bi bi-server" style="font-size:2.5rem;"></i>
+              Sistem Database Oracle
+            </div>
+            <div class="portfolio-card-body">
+              <span class="portfolio-card-tag">Oracle · PL/SQL · DBA</span>
+              <h3 class="portfolio-card-title">Sistem Database Oracle</h3>
+              <p class="portfolio-card-desc">
+                Perancangan dan implementasi database enterprise menggunakan Oracle 
+                19c dengan optimasi query, indexing, dan backup strategy.
+              </p>
+              <a href="#" class="btn-outline-accent ripple-btn" style="font-size:0.76rem; padding:9px 22px;">
+                View Project <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-lg-4 col-md-6 fade-in-up delay-2">
+          <div class="portfolio-card">
+            <div class="img-placeholder" style="height:200px; font-size:0.9rem; gap:8px; flex-direction:column;">
+              <i class="bi bi-phone" style="font-size:2.5rem;"></i>
+              Mobile App Prototype
+            </div>
+            <div class="portfolio-card-body">
+              <span class="portfolio-card-tag">Android · Java · SQLite</span>
+              <h3 class="portfolio-card-title">Mobile App Prototype</h3>
+              <p class="portfolio-card-desc">
+                Prototipe aplikasi Android untuk manajemen inventaris dengan 
+                database lokal SQLite dan antarmuka yang intuitif.
+              </p>
+              <a href="#" class="btn-outline-accent ripple-btn" style="font-size:0.76rem; padding:9px 22px;">
+                View Project <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-lg-4 col-md-6 fade-in-up delay-3">
+          <div class="portfolio-card">
+            <div class="img-placeholder" style="height:200px; font-size:0.9rem; gap:8px; flex-direction:column;">
+              <i class="bi bi-graph-up" style="font-size:2.5rem;"></i>
+              Dashboard Analitik
+            </div>
+            <div class="portfolio-card-body">
+              <span class="portfolio-card-tag">Python · Pandas · Tableau</span>
+              <h3 class="portfolio-card-title">Dashboard Analitik Data</h3>
+              <p class="portfolio-card-desc">
+                Dashboard visualisasi data interaktif untuk analisis performa 
+                bisnis menggunakan Python dan tools business intelligence.
+              </p>
+              <a href="#" class="btn-outline-accent ripple-btn" style="font-size:0.76rem; padding:9px 22px;">
+                View Project <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row -->
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║            PROJECTS SECTION              ║
+       ╚══════════════════════════════════════════╝ -->
+  <section id="projects">
+    <div class="section-num">04</div>
+    <div class="container">
+
+      <!-- Header -->
+      <div class="row mb-5">
+        <div class="col-lg-6 fade-in-left">
+          <span class="section-label">GitHub Projects</span>
+          <h2 class="section-title">Active <em>Development</em></h2>
+          <div class="divider"></div>
+          <p style="font-size:0.95rem;">
+            Proyek-proyek yang sedang aktif dikembangkan, 
+            dari sistem enterprise hingga eksperimen teknologi baru.
+          </p>
+        </div>
+        <div class="col-lg-6 d-flex align-items-end justify-content-lg-end fade-in-right">
+          <a href="https://github.com/khadafi-111" target="_blank" rel="noopener" class="btn-accent">
+            <i class="bi bi-github me-2"></i>View All on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Accordion -->
+      <div class="accordion fade-in-up" id="projectsAccordion">
+
+        <!-- Item 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#proj1"
+                    aria-expanded="true" aria-controls="proj1">
+              <i class="bi bi-code-slash me-3" style="color:var(--accent);"></i>
+              Student Information System v2.0
+            </button>
+          </h2>
+          <div id="proj1" class="accordion-collapse collapse show" data-bs-parent="#projectsAccordion">
+            <div class="accordion-body">
+              <p>
+                Pengembangan lanjutan dari Sistem Informasi Akademik dengan arsitektur 
+                lebih modular. Versi terbaru mengimplementasikan REST API untuk integrasi 
+                mobile app, role-based access control yang lebih granular, dan sistem 
+                notifikasi real-time untuk mahasiswa dan dosen.
+              </p>
+              <p style="margin-top:12px;">
+                <strong>Status:</strong> In Development (Sprint 3 of 6) — Target release: Semester Genap 2025
+              </p>
+              <div class="project-meta">
+                <span class="project-tag">PHP 8.2</span>
+                <span class="project-tag">Laravel 11</span>
+                <span class="project-tag">MySQL 8</span>
+                <span class="project-tag">Vue.js</span>
+                <span class="project-tag">REST API</span>
+              </div>
+              <a href="https://github.com/khadafi-111" target="_blank" rel="noopener" class="btn-outline-accent mt-3" style="font-size:0.76rem; padding:9px 22px;">
+                <i class="bi bi-github me-1"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#proj2"
+                    aria-expanded="false" aria-controls="proj2">
+              <i class="bi bi-database-gear me-3" style="color:var(--accent);"></i>
+              Oracle DB Performance Toolkit
+            </button>
+          </h2>
+          <div id="proj2" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+            <div class="accordion-body">
+              <p>
+                Kumpulan skrip PL/SQL dan tools untuk monitoring dan optimasi performa 
+                Oracle Database. Mencakup query analyzer, index recommendation engine, 
+                dan automated report generator untuk DBA workflow.
+              </p>
+              <p style="margin-top:12px;">
+                <strong>Highlight:</strong> Berhasil meningkatkan query performance rata-rata 
+                40% pada testing environment dengan dataset 10M+ records.
+              </p>
+              <div class="project-meta">
+                <span class="project-tag">Oracle 19c</span>
+                <span class="project-tag">PL/SQL</span>
+                <span class="project-tag">SQL*Plus</span>
+                <span class="project-tag">Shell Script</span>
+              </div>
+              <a href="https://github.com/khadafi-111" target="_blank" rel="noopener" class="btn-outline-accent mt-3" style="font-size:0.76rem; padding:9px 22px;">
+                <i class="bi bi-github me-1"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#proj3"
+                    aria-expanded="false" aria-controls="proj3">
+              <i class="bi bi-phone me-3" style="color:var(--accent);"></i>
+              Campus Companion Mobile App
+            </button>
+          </h2>
+          <div id="proj3" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+            <div class="accordion-body">
+              <p>
+                Aplikasi Android untuk mahasiswa Universitas Ma Chung yang menyediakan 
+                akses jadwal kuliah, informasi kampus, pengumuman akademik, dan direktori 
+                dosen dalam satu platform yang mudah digunakan.
+              </p>
+              <p style="margin-top:12px;">
+                <strong>Phase:</strong> Beta Testing — Sedang dalam review untuk distribusi internal kampus.
+              </p>
+              <div class="project-meta">
+                <span class="project-tag">Android</span>
+                <span class="project-tag">Java</span>
+                <span class="project-tag">Firebase</span>
+                <span class="project-tag">SQLite</span>
+                <span class="project-tag">Retrofit</span>
+              </div>
+              <a href="https://github.com/khadafi-111" target="_blank" rel="noopener" class="btn-outline-accent mt-3" style="font-size:0.76rem; padding:9px 22px;">
+                <i class="bi bi-github me-1"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#proj4"
+                    aria-expanded="false" aria-controls="proj4">
+              <i class="bi bi-bar-chart me-3" style="color:var(--accent);"></i>
+              Data Analysis Portfolio (Research Project)
+            </button>
+          </h2>
+          <div id="proj4" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+            <div class="accordion-body">
+              <p>
+                Kumpulan analisis data dan visualisasi untuk berbagai dataset publik 
+                sebagai bagian dari pengembangan skill data science. Mencakup analisis 
+                ekonomi regional Jawa Timur, tren digital UMKM, dan studi kasus lainnya.
+              </p>
+              <p style="margin-top:12px;">
+                <strong>Output:</strong> 12+ notebook Jupyter dengan visualisasi interaktif 
+                dan laporan analisis komprehensif.
+              </p>
+              <div class="project-meta">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Pandas</span>
+                <span class="project-tag">Matplotlib</span>
+                <span class="project-tag">Seaborn</span>
+                <span class="project-tag">Jupyter</span>
+              </div>
+              <a href="https://github.com/" target="_blank" rel="noopener" class="btn-outline-accent mt-3" style="font-size:0.76rem; padding:9px 22px;">
+                <i class="bi bi-github me-1"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /accordion -->
+
+      <!-- GitHub CTA Box -->
+      <div class="github-cta-box fade-in-up delay-3">
+        <i class="bi bi-github" style="font-size:2.2rem; color:var(--accent); display:block; margin-bottom:12px;"></i>
+        <h4>Explore More on GitHub</h4>
+        <p style="margin-bottom:20px; font-size:0.92rem;">
+          Semua proyek tersedia di GitHub — termasuk source code, dokumentasi, dan demo.
+        </p>
+        <a href="https://github.com/khadafi-111" target="_blank" rel="noopener" class="btn-accent">
+          <i class="bi bi-github me-2"></i>GitHub Project Manager
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║             CONTACT SECTION              ║
+       ╚══════════════════════════════════════════╝ -->
+  <section id="contact">
+    <div class="section-num">05</div>
+    <div class="container">
+
+      <!-- Header -->
+      <div class="text-center mb-5 fade-in-up">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Let's <em>Connect</em></h2>
+        <div class="divider center"></div>
+        <p style="max-width:480px; margin:0 auto; font-size:0.95rem;">
+          Terbuka untuk kolaborasi proyek, diskusi teknologi, atau sekedar 
+          ngobrol tentang software development.
+        </p>
+      </div>
+
+      <div class="row g-5">
+
+        <!-- Contact Info -->
+        <div class="col-lg-5 fade-in-left">
+          <div class="contact-info-item">
+            <div class="contact-icon"><i class="bi bi-envelope-fill" style="color:var(--base);"></i></div>
+            <div>
+              <div class="contact-info-label">Email</div>
+              <a href="mailto:312410016@student.machung.ac.id" class="contact-info-value">Khadafi@email.com</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon"><i class="bi bi-linkedin" style="color:var(--base);"></i></div>
+            <div>
+              <div class="contact-info-label">LinkedIn</div>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener" class="contact-info-value">linkedin.com/in/Khadafi</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon"><i class="bi bi-github" style="color:var(--base);"></i></div>
+            <div>
+              <div class="contact-info-label">GitHub</div>
+              <a href="https://github.com/khadafi-111" target="_blank" rel="noopener" class="contact-info-value">github.com/Khadafi-111</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon"><i class="bi bi-geo-alt-fill" style="color:var(--base);"></i></div>
+            <div>
+              <div class="contact-info-label">Lokasi</div>
+              <div class="contact-info-value">Malang, Jawa Timur 🇮🇩</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon"><i class="bi bi-mortarboard-fill" style="color:var(--base);"></i></div>
+            <div>
+              <div class="contact-info-label">Universitas</div>
+              <a href="https://machung.ac.id/" target="_blank" rel="noopener" class="contact-info-value">Universitas Ma Chung</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-lg-7 fade-in-right">
+          <form id="contactForm" class="contact-form" novalidate>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="contactName">Nama Lengkap</label>
+                <input type="text" id="contactName" class="form-control"
+                       placeholder="Nama Anda" required />
+              </div>
+              <div class="col-md-6">
+                <label for="contactEmail">Email</label>
+                <input type="email" id="contactEmail" class="form-control"
+                       placeholder="email@example.com" required />
+              </div>
+              <div class="col-12">
+                <label for="contactSubject">Subjek</label>
+                <input type="text" id="contactSubject" class="form-control"
+                       placeholder="Tentang apa yang ingin didiskusikan?" />
+              </div>
+              <div class="col-12">
+                <label for="contactMessage">Pesan</label>
+                <textarea id="contactMessage" class="form-control" rows="5"
+                          placeholder="Tulis pesan Anda di sini..." required></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn-accent" style="width:100%; padding:14px; font-size:0.84rem;">
+                  <i class="bi bi-send me-2"></i>Kirim Pesan
+                </button>
+              </div>
+            </div>
+
+            <!-- Success feedback -->
+            <div id="formFeedback" style="display:none; margin-top:16px; padding:14px 18px; background:var(--primary); border-radius:var(--radius); border-left:3px solid var(--accent); font-size:0.88rem; color:var(--text-dark);">
+              <i class="bi bi-check-circle-fill me-2" style="color:var(--accent);"></i>
+              Pesan berhasil dikirim! Saya akan membalas secepatnya.
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║                  FOOTER                  ║
+       ╚══════════════════════════════════════════╝ -->
+  <footer>
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="footer-brand">Khadafi</div>
+          <div class="footer-tagline">Software Developer · Database Enthusiast</div>
+        </div>
+
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+          <div class="footer-social">
+            <a href="https://github.com/khadafi-111" target="_blank" rel="noopener" title="GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener" title="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="mailto:312410016@student.machung.ac.id" title="Email">
+              <i class="bi bi-envelope-fill"></i>
+            </a>
+            <a href="https://machung.ac.id/" target="_blank" rel="noopener" title="Universitas Ma Chung">
+              <i class="bi bi-mortarboard-fill"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-4 text-md-end">
+          <div class="footer-links">
+            <a href="https://machung.ac.id/" target="_blank" rel="noopener">Ma Chung</a>
+            <a href="https://github.com/khadafi-111" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="footer-divider" />
+
+      <div class="text-center footer-copy">
+        &copy; 2025 MOH. Khadafi Wijaya. All rights reserved. 
+        Built with <i class="bi bi-heart-fill" style="color:var(--accent); font-size:0.7rem;"></i> 
+        using Bootstrap 5 &amp; Vanilla JS.
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Back to Top -->
+  <button id="backToTop" title="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Cursor blink keyframe -->
+  <style>
+    @keyframes blink { 50% { opacity: 0; } }
+  </style>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>
